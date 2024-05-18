@@ -13,7 +13,6 @@ func TestFizzBuzzShouldReturn1WhenInput1(t *testing.T) {
 	}
 }
 
-
 func TestFizzBuzzShouldReturn2WhenInput2(t *testing.T) {
 	input := 2
 
@@ -42,6 +41,17 @@ func TestFizzBuzzShouldReturn4WhenInput4(t *testing.T) {
 	got := FizzBuzz(input)
 
 	want := "4"
+	if got != want {
+		t.Errorf("got %q but want %q", got, want)
+	}
+}
+
+func TestFizzBuzzShouldReturnBuzzWhenInput5(t *testing.T) {
+	input := 5
+
+	got := FizzBuzz(input)
+
+	want := "Buzz"
 	if got != want {
 		t.Errorf("got %q but want %q", got, want)
 	}
