@@ -1,5 +1,10 @@
 package main
 
+import "fmt"
+
 func FizzBuzz(n int) string {
-	return "1"
+	if n == 3 {
+		return "Fizz"
+	}
+	return fmt.Sprintf("%d", n)
 }
