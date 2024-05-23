@@ -3,9 +3,19 @@ package main
 import "fmt"
 
 func FizzBuzz(n int) string {
-	results := map[bool]string{
+
+	fizzMap := map[bool]string{
 		true : "Fizz", 
-		false : fmt.Sprintf("%d",n),
+		false : "",
 	}
-	return results[ n == 3 ] 
+	buzzMap := map[bool]string{
+		true : "Buzz", 
+		false : "",
+	}
+	result := fmt.Sprintf("%s%s",fizzMap[n==3],buzzMap[n==5])
+	resultMap := map[bool]string{
+		true: fmt.Sprintf("%d",n),
+		false: result,
+	}
+	return resultMap[result == ""]
 }
