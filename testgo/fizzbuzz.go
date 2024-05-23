@@ -12,7 +12,7 @@ func FizzBuzz(n int) string {
 		true : "Buzz", 
 		false : "",
 	}
-	result := fmt.Sprintf("%s%s",fizzMap[n%3 ==0 ],buzzMap[n==5])
+	result := fmt.Sprintf("%s%s",fizzMap[n%3 ==0 ],buzzMap[n%5 == 0 ])
 	resultMap := map[bool]string{
 		true: fmt.Sprintf("%d",n),
 		false: result,
