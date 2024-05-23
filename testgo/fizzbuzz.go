@@ -3,5 +3,9 @@ package main
 import "fmt"
 
 func FizzBuzz(n int) string {
-	return fmt.Sprintf("%d",n)
+	results := map[bool]string{
+		true : "Fizz", 
+		false : fmt.Sprintf("%d",n),
+	}
+	return results[ n == 3 ] 
 }
